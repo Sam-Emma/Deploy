@@ -14,7 +14,7 @@ def Home():
         preds = m2.makePrediction(pele,pewe,sele,sewe)
         mm = preds
         print(preds)
-    return render_template("index.html",pred = mm)
+    return render_template("index.html")
 #@app.route('/sub', methods = ['POST'])
 #def submit():
 #    if request.method == "POST":
