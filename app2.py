@@ -3,7 +3,6 @@
 from flask import Flask, request,  render_template
 import model2 as m2
 app = Flask(__name__)
-mm =""
 @app.route("/", methods =["POST","GET"])
 def Home():
     if request.method == "POST":
