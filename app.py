@@ -3,9 +3,9 @@
 from flask import Flask, request,  render_template
 import model2 as m2
 app = Flask(__name__)
-global mm
 @app.route("/", methods =["POST","GET"])
 def Home():
+    mm = ""
     if request.method == "POST":
         pele = request.form["peLe"]
         pewe = request.form["peWe"]
@@ -14,7 +14,7 @@ def Home():
         preds = m2.makePrediction(pele,pewe,sele,sewe)
         mm = preds
         print(preds)
-    return render_template("index.html")
+    return render_template("index.html",pred = mm)
 #@app.route('/sub', methods = ['POST'])
 #def submit():
 #    if request.method == "POST":
